@@ -2,7 +2,7 @@
 
 ## Aclaración
 
-En el video de YouTube se utilizó **Flet 0.28.3** y **Visual Studio Code** con la extensión oficial de Python, además de las dependencias **git** y **libmpv2**.
+En el video de YouTube se utilizó **Flet 0.80.0** y **Visual Studio Code** con la extensión oficial de Python.
 
 ## Introducción
 
@@ -66,7 +66,7 @@ Desde aquí puedes empezar a experimentar con `src/main.py`.
 
 ## Empaquetado
 
-En esta sección, Flet descargará automáticamente **Flutter** y **Java** en la carpeta principal del usuario.
+En esta sección, Flet descargará automáticamente **Flutter**, **Java** y **Android SDK** en la carpeta principal del usuario.
 
 ### Debian
 
@@ -102,6 +102,13 @@ flet build apk --flutter-build-args=--target-platform --flutter-build-args=andro
 flet build apk --flutter-build-args=--target-platform --flutter-build-args=android-arm
 ```
 
+### Error utf8 (solucion temporal)
+```
+# Debian
+LC_ALL=C.UTF-8 flet build linux
+# Android
+LC_ALL=C.UTF-8 flet build apk
+```
 ---
 
 ## Ocultar carpetas
@@ -115,6 +122,7 @@ nano ~/.hidden
 Agrega lo siguiente dentro del archivo y guarda los cambios:
 
 ```text
+Android
 flutter
 java
 ```
